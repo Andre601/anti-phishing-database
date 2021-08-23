@@ -9,7 +9,7 @@ Welcome to the Anti-Scam Database!
 This repository tries to be a source for moderation bots and other tools to prevent scams from happening.
 
 ## What is a scam?
-> Please read this Wikipedia page for a more official description:   
+> Please read this Wikipedia page for a more official description: https://en.wikipedia.org/wiki/Confidence_trick   
 > The below summary is in no way an official description!
 
 A scam is - in most basic terms - an attempt of someone (The "scammer") to abuse a person's trust, naivity or greedyness to gain access to money or sensitive information (login data, adresses, etc.).  
