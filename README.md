@@ -30,16 +30,16 @@ The repository is structured like this:
      |
      |- <year>/
          |
-         |- <dd-mm-<num>>.json
+         |- <domain>.<tld>-<dd>.<mm>.json
 ```
 
-| File/Folder          | Description                                                                                                                                                                                                 |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `database`           | Folder containing all JSON files with the info.                                                                                                                                                             |
-| `<year>`             | Folder named after the current year (i.e. `2021`). Used to further distinguish the different domains for when they where added.                                                                             |
-|                      |                                                                                                                                                                                                             |
-| `summary.json`       | File containing all domains from the different years and days. Recommended to use if you want the newest info.                                                                                              |
-| `<dd-mm-<num>>.json` | File named after the day and month at which it was added. It contains the info about the scam-domain. `<num>` is a number starting at 1 that is used to distinguish files that where added at the same day. |
+| File/Folder                     | Description                                                                                                                                             |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `database`                      | Folder containing all JSON files with the info.                                                                                                         |
+| `<year>`                        | Folder named after the current year (i.e. `2021`). Used to further distinguish the different domains for when they where added.                         |
+|                                 |                                                                                                                                                         |
+| `summary.json`                  | File containing all domains from the different years and days. Recommended to use if you want the newest info.                                          |
+| `<domain>.<tld>-<dd>.<mm>.json` | The file with the information in it. The name is based on the domain used, followed by the day of month and month at which it was PRed to the database. |
 
 ## File structure
 Each JSON file has the exact same file structure to make it easier for moderation bots and similar to get the information.
@@ -55,11 +55,11 @@ Here is an example:
 }
 ```
 
-| key                | Description                                                                                                                                               |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| domain             | The domain without HTTP(S), subdomains and/or sub-pages that is used for the scam. You should always assume that subdomains and/or subpages are used too. |
-| affected_platforms | List of known platforms where this scam is posted. This can be an empty list if no platform is known yet.                                                 |
-| description        | A summary of what the scam is about and how it is used.                                                                                                   |
+| key                  | Description                                                                                                                                               |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `domain`             | The domain without HTTP(S), subdomains and/or sub-pages that is used for the scam. You should always assume that subdomains and/or subpages are used too. |
+| `affected_platforms` | List of known platforms where this scam is posted. This can be an empty list if no platform is known yet.                                                 |
+| `description`        | A summary of what the scam is about and how it is used.                                                                                                   |
 
 ## How to use this repository
 The easiest way to use this repository is to simply go to https://raw.githubusercontent.com/Andre601/anti-scam-database/main/database/summary.json to get the content of the `summary.json`
