@@ -1,20 +1,28 @@
+[jsdelivr]: https://www.jsdelivr.com/
+
+[issue]: https://github.com/Andre601/anti-scam-database/issues/new?template=report_domain.yml
+[pr]: https://github.com/Andre601/anti-scam-database/pulls
+
 # Anti-Scam Database
-The Anti-Scam database is a collection of URLs of known scam-attempts.
+Welcome to the Anti-Scam Database!
 
-## What is "Scam"?
-> See the Wikipedia article for a more in-depth explanation: https://en.wikipedia.org/wiki/Confidence_trick  
-> The below description is **no official description of the term "scam" and is given without warranty or guarantee of accuracy!**
+This repository tries to be a source for moderation bots and other tools to prevent scams from happening.
 
-A "scam" in the most laymen term is an attempt of abusing someones trust, naivity or greed into making them give away personal information, signing a contract or similar.  
-The most common case is where a person sends a link to someone, where the link itself fakes the appearance of a popular site (Facebook, Steam, Discord, etc.) in an attempt to gain the user's login-data to then use that account to continue the scam (Also known as snowball-system).
+## What is a scam?
+> Please read this Wikipedia page for a more official description:   
+> The below summary is in no way an official description!
 
-## How does this repository work?
-The repository has the following structure:
+A scam is - in most basic terms - an attempt of someone (The "scammer") to abuse a person's trust, naivity or greedyness to gain access to money or sensitive information (login data, adresses, etc.).  
+In most cases will the scammed person get redirected to a fake login page to use their login info there, which would then be abused to gain access to their account and continue the scam towards others (The so called "snowball effect").
+
+## How does this repository help?
+This repository hosts JSON files which contain known domains that are used in scam-attacks alongside other information that might be useful.  
+Please read the info about the [file structure](#file-structure) for more info.
+
+## Repository structure
+The repository is structured like this:
 
 ```
-root
- |
- |- README.md
  |
  |- database/
      |
@@ -24,14 +32,41 @@ root
          |
          |- <dd-mm-<num>>.json
 ```
-The `database` folder contains the different subfolders for each year, but also a `summary.json` which contains all known urls combined into a single JSON file.  
-Each file has the format `dd-mm-num.json` where `dd` is the day of its addition, `mm` is the month and `num` a increasing number, in case more than one domain has been added on the same day.
 
-The date is determined by CET/CEST and can therefore be different from your time when you reported it.
+| File/Folder          | Description                                                                                                                                                                                                 |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `database`           | Folder containing all JSON files with the info.                                                                                                                                                             |
+| `<year>`             | Folder named after the current year (i.e. `2021`). Used to further distinguish the different domains for when they where added.                                                                             |
+|                      |                                                                                                                                                                                                             |
+| `summary.json`       | File containing all domains from the different years and days. Recommended to use if you want the newest info.                                                                                              |
+| `<dd-mm-<num>>.json` | File named after the day and month at which it was added. It contains the info about the scam-domain. `<num>` is a number starting at 1 that is used to distinguish files that where added at the same day. |
 
-You can now use either https://raw.githubusercontent.com/Andre601/anti-scam-database/main/database/ or use jsdelivr (more recommended) to get the latest files of the repository for yourself.  
-All files have the same structure, so it should be easy for you to handle them.
+## File structure
+Each JSON file has the exact same file structure to make it easier for moderation bots and similar to get the information.
 
-## Adding and removing a domain
-If you found a domain that is used for scamming or one domain no longer exists or is no longer used in scam-attempts should you open an [issue] to report it to us.  
-We always try to keep the database as up-to-date as possible, but we need your help for this, so never hesitate to report a URL or even [PR it yourself][pr] if you know the structure of the JSON files.
+Here is an example:  
+```json
+{
+  "domain": "somescam.com",
+  "affected_platforms": [
+    "someplatform"
+  ],
+  "description": "This domain is used for scams in someplatform."
+}
+```
+
+| key                | Description                                                                                                                                               |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| domain             | The domain without HTTP(S), subdomains and/or sub-pages that is used for the scam. You should always assume that subdomains and/or subpages are used too. |
+| affected_platforms | List of known platforms where this scam is posted. This can be an empty list if no platform is known yet.                                                 |
+| description        | A summary of what the scam is about and how it is used.                                                                                                   |
+
+## How to use this repository
+The easiest way to use this repository is to simply go to https://raw.githubusercontent.com/Andre601/anti-scam-database/main/database/summary.json to get the content of the `summary.json`
+
+Alternatively could you also use [jsDelivr] to access the repository. The URL would be https://cdn.jsdelivr.net/gh/Andre601/anti-scam-database@main/database/summary.json
+
+You can, of course, also access the separate files directly, but this may require to do so through the GitHub API.
+
+## How to help
+You can help this repository by either [reporting a domain][issue] or [PRing it yourself][pr].

@@ -1,0 +1,10 @@
+[
+  {
+    "domain": "discorcl.click",
+    "affected_platforms": [
+      "discord",
+      "steam"
+    ],
+    "description": "Steam-Scam, used to trick people into thinking, that Discord and Steam (Valve) hold a event to get free Discord Nitro."
+  }
+]
