@@ -1,0 +1,37 @@
+name: Report Domain
+description: Found a domain that is used in a scam? Use this issue form to report it to us!
+
+body:
+- type: markdown
+  attributes:
+    value: |-
+      Thank you for reporting a domain as a possible scam-domain!
+      Your contribution helps our goal in making various places more safe for everyone.
+      
+      Please make sure to fill out all requested information as detailed as possible.
+- type: input
+  attributes:
+    label: Domain
+    description: |-
+      Provide the domain **without** its protocol (http/https), subdomain or any sub-pages.
+      
+      **Example:** https://subdomain.example.com/page becomes example.com
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: Affected platforms
+    description: |-
+      Please provide a comma-separated list of platforms, sites, etc. which the domain is shared on.
+      If you don't know any platform that is affected by this, put "N/A" instead.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Proof
+    description: |-
+      Please provide valid proof for why the reported domain is actually used for scams.
+      Prefered are screenshots showing the usage of the domain itself.
+  validations:
+    required: true
+      
