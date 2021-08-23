@@ -1,5 +1,5 @@
-[issues]: 
-[pull requests]: 
+[issues]: https://github.com/Andre601/anti-scam-database/issues/new?template=report_domain.yml
+[pull requests]: https://github.com/Andre601/anti-scam-database/pulls
 
 [converter]: https://dateful.com/time-zone-converter
 [utc]: https://dateful.com/time-zone-converter?tz2=UTC
