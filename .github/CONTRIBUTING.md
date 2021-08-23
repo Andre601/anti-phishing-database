@@ -24,7 +24,7 @@ When submiting domains through Pull requests should you keep some general guidel
 The files should be named in the format `<domain>.<tld>-<dd>.<mm>.json` where `<domain>.<tld>` is the domain used alongside its tld (i.e. `example.com`) and `<dd>.<mm>` is the day of the month and month itself in which the domain was added to this database (i.e. `01.12` for 1st of december).  
 
 Please note that the day and month are **based of the UTC timezone** for consistency!  
-You can use [this handy tool][converer] to convert your local time into [UTC] (Click the UTC text to have the option pre-selected).
+You can use [this handy tool][converter] to convert your local time into [UTC] (Click the UTC text to have the option pre-selected).
 
 ### summary.json
 Whenever you add a new file to the database should you update the `summary.json` alongside it, as it contains all the domains in a single collection.
