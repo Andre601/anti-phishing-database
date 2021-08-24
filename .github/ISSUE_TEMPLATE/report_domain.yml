@@ -8,7 +8,16 @@ body:
       Thank you for reporting a domain as a possible scam-domain!
       Your contribution helps our goal in making various places more safe for everyone.
       
-      Please make sure to fill out all requested information as detailed as possible.
+      Please make sure to fill out all requested information as detailed as possible and to follow the guidelines mentioned in the [Contributing file](https://github.com/Andre601/anti-scam-database/blob/main/.github/CONTRIBUTING.md).
+- type: checkboxes
+  attributes:
+    label: Confirmation
+    description: Please confirm that you made the following checks first.
+    options:
+    - label: "I've read the [Contributing file](https://github.com/Andre601/anti-scam-database/blob/main/.github/CONTRIBUTING.md) about how to report domains."
+      required: true
+    - label: "I've checked the [database folder](https://github.com/Andre601/anti-scam-database/tree/main/database) for already existing domains."
+      required: true
 - type: input
   attributes:
     label: Domain
