@@ -58,7 +58,7 @@ Here is an example:
 | key                  | Description                                                                                                                                               |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `domain`             | The domain without HTTP(S), subdomains and/or sub-pages that is used for the scam. You should always assume that subdomains and/or subpages are used too. |
-| `affected_platforms` | List of known platforms where this scam is posted. This can be an empty list if no platform is known yet.                                                 |
+| `affected_platforms` | List of known platforms where this scam is either posted on or that are used in the scam itself.                                                          |
 | `description`        | A summary of what the scam is about and how it is used.                                                                                                   |
 
 ## How to use this repository
