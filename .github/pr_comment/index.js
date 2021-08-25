@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 Toolkit.run(
   async (tools) => {
-    const template = tools.readFile("./template.md");
+    const template = await tools.readFile("./template.md");
     const { pull_request } = tools.context.payload;
     //tools.log.debug(pull_request);
     const file = require(__dirname + "/../../database/summary.json");
