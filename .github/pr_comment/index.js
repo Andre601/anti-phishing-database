@@ -12,8 +12,8 @@ Toolkit.run(
       start_side: "LEFT",
       start_line: 0,
     };
-    tools.log.debug(`Commenting on pr... API URL: https://api.github.com/${pull_request._links.self.href}/comments`);
-    const res = await fetch(`https://api.github.com/${pull_request._links.self.href}/comments`, {
+    tools.log.debug(`Commenting on pr... API URL: ${pull_request._links.self.href}/comments`);
+    const res = await fetch(`${pull_request._links.self.href}/comments`, {
       method: "POST",
       body: JSON.stringify(body),
       headers: { "Content-Type": "application/json" },
