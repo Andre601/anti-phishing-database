@@ -19,3 +19,5 @@ jobs:
         run: npm install node-fetch actions-toolkit
       - name: Run
         uses: ./.github/pr_comment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
