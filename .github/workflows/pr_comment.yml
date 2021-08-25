@@ -18,4 +18,4 @@ jobs:
       - name: Install dependencies
         run: npm install node-fetch action-toolkit
       - name: Run
-        use: ./.github/pr_comment
+        uses: ./.github/pr_comment
