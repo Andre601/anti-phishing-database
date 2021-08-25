@@ -6,8 +6,15 @@ Toolkit.run(
     const template = tools.readFile("./template.md");
     const { pull_request } = tools.context.payload;
     //tools.log.debug(pull_request);
+    const file = require("./database/summary.json");
+    let text = [];
+    file.forEach((data) => {
+      text.push(`${data.domain}`);
+    });
+    text = text.join("\n");
+    text = template.replace("{content}", text);
     const body = {
-      body: template,
+      body: text,
       start_side: "LEFT",
       start_line: 0,
     };
