@@ -6,14 +6,14 @@ Toolkit.run(
     const pr = tools.inputs.pr_number;
     const template = tools.readFile("./template.md");
     const { pull_request } = tools.context.payload;
-    tools.log.debug(pull_request);
+    //tools.log.debug(pull_request);
     const body = {
       body: template,
       start_side: "LEFT",
       start_line: 0,
     };
-    tools.log.debug(`Commenting on pr... API URL: https://api.github.com/${pull_request.self.href}/comments`);
-    const res = await fetch(`https://api.github.com/${pull_request.self.href}/comments`, {
+    tools.log.debug(`Commenting on pr... API URL: https://api.github.com/${pull_request._links.self.href}/comments`);
+    const res = await fetch(`https://api.github.com/${pull_request._links.self.href}/comments`, {
       method: "POST",
       body: JSON.stringify(body),
       headers: { "Content-Type": "application/json" },
