@@ -13,6 +13,7 @@ Toolkit.run(
     });
     text = text.join("\n• ");
     text = template.replace("{content}", text);
+    tools.log.debug(text);
     const body = {
       body: text,
       start_side: "LEFT",
