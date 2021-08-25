@@ -2,7 +2,7 @@ name: PR Commenter
 
 on:
   pull_request:
-    types: [created]
+    #types: [created]
 
 jobs:
   build:
@@ -16,6 +16,8 @@ jobs:
         with:
           node-version: "16.x"
       - name: Install dependencies
-        run: npm install node-fetch action-toolkit
+        run: npm install node-fetch actions-toolkit
       - name: Run
         uses: ./.github/pr_comment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
