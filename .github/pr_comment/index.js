@@ -3,7 +3,6 @@ const fetch = require("node-fetch");
 
 Toolkit.run(
   async (tools) => {
-    const pr = tools.inputs.pr_number;
     const template = tools.readFile("./template.md");
     const { pull_request } = tools.context.payload;
     //tools.log.debug(pull_request);
@@ -18,7 +17,7 @@ Toolkit.run(
       body: JSON.stringify(body),
       headers: { "Content-Type": "application/json" },
     });
-    if (res.status !== 201) return tools.exit.failure("Could not comment on the pr");
+    if (res.status !== 201) return tools.exit.failure(`Could not comment on the pr. Status: ${res.status}`);
     tools.exit.success("Successfully commented!");
   },
   {
