@@ -1,0 +1,5 @@
+name: 'PR Comment'
+description: 'Comment stats on a pr'
+runs:
+  using: 'node12'
+  main: 'index.js'
