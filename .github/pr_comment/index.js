@@ -3,16 +3,17 @@ const fetch = require("node-fetch");
 
 Toolkit.run(
   async (tools) => {
-    const template = tools.readFile("./template.md");
+    const template = await tools.readFile("./template.md");
     const { pull_request } = tools.context.payload;
     //tools.log.debug(pull_request);
-    const file = require("./database/summary.json");
+    const file = require(__dirname + "/../../database/summary.json");
     let text = [];
     file.forEach((data) => {
-      text.push(`${data.domain}`);
+      text.push(`• ${data.domain}`);
     });
     text = text.join("\n");
     text = template.replace("{content}", text);
+    tools.log.debug(text);
     const body = {
       body: text,
       start_side: "LEFT",
