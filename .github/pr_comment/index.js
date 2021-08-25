@@ -9,9 +9,9 @@ Toolkit.run(
     const file = require(__dirname + "/../../database/summary.json");
     let text = [];
     file.forEach((data) => {
-      text.push(`${data.domain}`);
+      text.push(`• ${data.domain}`);
     });
-    text = text.join("\n• ");
+    text = text.join("\n");
     text = template.replace("{content}", text);
     tools.log.debug(text);
     const body = {
