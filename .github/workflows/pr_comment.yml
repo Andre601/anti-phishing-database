@@ -1,0 +1,21 @@
+name: PR Commenter
+
+on:
+  pull_request:
+    types: [created]
+
+jobs:
+  build:
+    name: Comment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2.4.0
+        with:
+          node-version: "16.x"
+      - name: Install dependencies
+        run: npm install node-fetch action-toolkit
+      - name: Run
+        use: ./.github/pr_comment
