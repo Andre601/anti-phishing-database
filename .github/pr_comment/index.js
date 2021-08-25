@@ -6,6 +6,7 @@ Toolkit.run(
     const pr = tools.inputs.pr_number;
     const template = tools.readFile("./template.md");
     const { pull_request } = tools.context.payload;
+    tools.log.debug(pull_request);
     const body = {
       body: template,
       start_side: "LEFT",
