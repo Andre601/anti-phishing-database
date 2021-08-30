@@ -1,8 +1,8 @@
 {
-    "domain": "discord.ru",
-    "affected_platforms": [
-      "discord",
-      "steam"
-    ],
-    "description": "Steam-Scam, used to trick people into thinking, that Discord and Steam (Valve) hold an event to get free Discord Nitro."
-  }
+  "domain": "discord.ru",
+  "affected_platforms": [
+    "discord",
+    "steam"
+  ],
+  "description": "Steam-Scam, used to trick people into thinking, that Discord and Steam (Valve) hold an event to get free Discord Nitro."
+}
