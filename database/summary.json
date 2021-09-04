@@ -197,5 +197,32 @@
       "steam"
     ],
     "description": "Steam-Scam, used to trick people into thinking, that Discord and Steam (Valve) hold an event to get free Discord Nitro."
+  },
+  {
+    "domain": "discord-claim.com",
+    "affected_platforms": [
+      "discord",
+      "steam"
+    ]
+  },
+  {
+    "domain": "discord-airdrop.com",
+    "affected_platforms": [
+      "discord",
+      "steam"
+    ]
+  },
+  {
+    "domain": "steamnltros.ru",
+    "affected_platforms": [
+      "discord",
+      "steam"
+    ]
+  },
+  {
+    "domain": "discord-controls.com",
+    "affected_platforms": [
+      "discord"
+    ]
   }
 ]
