@@ -2,6 +2,5 @@
   "domain": "discord-partner.com",
   "affected_platforms": [
     "discord"
-  ],
-  "description": "Discord-Scam, used to trick people into thinking, that Discord is giving people early access to become partnered."
+  ]
 }
