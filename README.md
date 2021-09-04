@@ -50,8 +50,7 @@ Here is an example:
   "domain": "somescam.com",
   "affected_platforms": [
     "someplatform"
-  ],
-  "description": "This domain is used for scams in someplatform."
+  ]
 }
 ```
 
@@ -59,7 +58,6 @@ Here is an example:
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `domain`             | The domain without HTTP(S), subdomains and/or sub-pages that is used for the scam. You should always assume that subdomains and/or subpages are used too. |
 | `affected_platforms` | List of known platforms where this scam is either posted on or that are used in the scam itself.                                                          |
-| `description`        | A summary of what the scam is about and how it is used.                                                                                                   |
 
 ## How to use this repository
 The easiest way to use this repository is to simply go to https://raw.githubusercontent.com/Andre601/anti-scam-database/main/database/summary.json to get the content of the `summary.json`
