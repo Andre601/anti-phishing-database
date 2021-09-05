@@ -199,5 +199,17 @@
     "affected_platforms": [
       "discord"
     ]
+  },
+  {
+    "domain": "dlscord-nltro.com",
+    "affected_platforms": [
+      "discord"
+    ]
+  },
+  {
+    "domain": "dlscordnitro.ru.com",
+    "affected_platforms": [
+      "discord"
+    ]
   }
 ]
