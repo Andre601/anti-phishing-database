@@ -211,5 +211,12 @@
     "affected_platforms": [
       "discord"
     ]
+  },
+  {
+    "domain": "dlscord-claim.com",
+    "affected_platforms": [
+      "discord",
+      "steam"
+    ]
   }
 ]
