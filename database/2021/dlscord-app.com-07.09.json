@@ -1,0 +1,7 @@
+{
+  "domain": "dlscord-app.com",
+  "affected_platforms": [
+    "discord",
+    "steam"
+  ]
+}
