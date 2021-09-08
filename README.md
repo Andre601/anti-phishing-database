@@ -39,7 +39,7 @@ Moderation bots and services can use this repository to protect places such as D
 To use this database, simply connect to either https://cdn.jsdelivr.net/gh/Andre601/anti-scam-database@main/database/summary.json (prefered) or https://raw.githubusercontent.com/Andre601/anti-scam-database/main/database/summary.json to get the contents of the `summary.json` file.  
 You can then use that content to check messages or similar for possible links.
 
-Keep in mind that we ONLY contain the domain itself and NOT include and sub-domains or sub-pages (i.e. `subpage.examplescam.com` is not included, but `examplescam.com` is).
+Keep in mind that we ONLY contain the domain itself and NOT include and sub-domains or sub-pages (i.e. `subdomain.examplescam.com/subpage` is not included, but `examplescam.com` is).
 
 ## Repository structure
 The repository currently has the following folder structure:  
