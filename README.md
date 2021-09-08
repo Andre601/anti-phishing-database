@@ -1,70 +1,86 @@
-[jsdelivr]: https://www.jsdelivr.com/
+[contribute]: https://github.com/Andre601/anti-scam-database/blob/main/.github/CONTRIBUTING.md
 
 [issue]: https://github.com/Andre601/anti-scam-database/issues/new?template=report_domain.yml
 [pr]: https://github.com/Andre601/anti-scam-database/pulls
 
-# Anti-Scam Database
-Welcome to the Anti-Scam Database!
+[phishing_discord]: 
+[phishing_site]: http://api.phish.surf:5000/gimme-domains
 
-This repository tries to be a source for moderation bots and other tools to prevent scams from happening.
+# Anti-Phishing Database
+Welcome to the Anti-Phishing Database
 
-## What is a scam?
-> Please read this Wikipedia page for a more official description: https://en.wikipedia.org/wiki/Confidence_trick   
-> The below summary is in no way an official description!
+This repository aims to be a reliable source for known domains used in various phishing attacks.  
+While the majority of domains are about Discord does it not mean it's only for those. Other domains may also be submitted for review.
 
-A scam is - in most basic terms - an attempt of someone (The "scammer") to abuse a person's trust, naivity or greedyness to gain access to money or sensitive information (login data, adresses, etc.).  
-In most cases will the scammed person get redirected to a fake login page to use their login info there, which would then be abused to gain access to their account and continue the scam towards others (The so called "snowball effect").
+## What is Phishing?
+> The below explanation is NOT a 100% accurate one. It's a generalized summary of what phishing is.  
+> Please see this Wikipedia article for a mor in-depth explanation: https://en.wikipedia.org/wiki/Phishing
 
-## How does this repository help?
-This repository hosts JSON files which contain known domains that are used in scam-attacks alongside other information that might be useful.  
-Please read the info about the [file structure](#file-structure) for more info.
+Phishing is a form of social engineering where an attacker sends a spoofed message to someone else in an attempt to trick them to reveal their sensitive information such as login data (username and password).  
+The most common type is domains mimicing login-pages and messages claiming you can "win" prizes or free subscriptions by linking your account. Doing so will give the attacker your login information and you'll become a victim, either being forced to pay to get your account back, or getting your account abused to further spread the phishing.
 
-## Repository structure
-The repository is structured like this:
+## How does this Repository help?
+This repository contains JSON files which each has a known phishing domain listed.
 
-```
- |
- |- database/
-     |
-     |- summary.json
-     |
-     |- <year>/
-         |
-         |- <domain>.<tld>-<dd>.<mm>.json
-```
-
-| File/Folder                     | Description                                                                                                                                             |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `database`                      | Folder containing all JSON files with the info.                                                                                                         |
-| `<year>`                        | Folder named after the current year (i.e. `2021`). Used to further distinguish the different domains for when they where added.                         |
-|                                 |                                                                                                                                                         |
-| `summary.json`                  | File containing all domains from the different years and days. Recommended to use if you want the newest info.                                          |
-| `<domain>.<tld>-<dd>.<mm>.json` | The file with the information in it. The name is based on the domain used, followed by the day of month and month at which it was PRed to the database. |
-
-## File structure
-Each JSON file has the exact same file structure to make it easier for moderation bots and similar to get the information.
-
-Here is an example:  
+Each file is structered the same way:  
 ```json
 {
-  "domain": "somescam.com",
+  "domain": ":domain",
   "affected_platforms": [
-    "someplatform"
+    ":platform"
   ]
 }
 ```
 
-| key                  | Description                                                                                                                                               |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `domain`             | The domain without HTTP(S), subdomains and/or sub-pages that is used for the scam. You should always assume that subdomains and/or subpages are used too. |
-| `affected_platforms` | List of known platforms where this scam is either posted on or that are used in the scam itself.                                                          |
+In addition does this repository have a `summary.json` which contains all the separate domains in a single file.  
+Moderation bots and services can use this repository to protect places such as Discord servers or similar. There are also other sources available that can help with this goal. Please see the [Other sources](#other-sources) section for more info.
 
-## How to use this repository
-The easiest way to use this repository is to simply go to https://raw.githubusercontent.com/Andre601/anti-scam-database/main/database/summary.json to get the content of the `summary.json`
+## How to use
+To use this database, simply connect to either https://cdn.jsdelivr.net/gh/Andre601/anti-scam-database@main/database/summary.json (prefered) or https://raw.githubusercontent.com/Andre601/anti-scam-database/main/database/summary.json to get the contents of the `summary.json` file.  
+You can then use that content to check messages or similar for possible links.
 
-Alternatively could you also use [jsDelivr] to access the repository. The URL would be https://cdn.jsdelivr.net/gh/Andre601/anti-scam-database@main/database/summary.json
+Keep in mind that we ONLY contain the domain itself and NOT include and sub-domains or sub-pages (i.e. `subpage.examplescam.com` is not included, but `examplescam.com` is).
 
-You can, of course, also access the separate files directly, but this may require to do so through the GitHub API.
+## Repository structure
+The repository currently has the following folder structure:  
+```
+<root>
+  |
+  |- .github/
+  |    |
+  |    |- ISSUE_TEMPLATE/
+  |    |    |
+  |    |    |- report_domain.yml
+  |    |
+  |    |- CONTRIBUTING.md
+  |    |- PULL_REQUEST_TEMPLATE.md
+  |
+  |- database/
+  |    |
+  |    |- 2021/
+  |    |    |
+  |    |    |- <domain>.<tld>-<day>.<month>.json
+  |    |
+  |    |- summary.json
+  |
+  |- README.md
 
-## How to help
-You can help this repository by either [reporting a domain][issue] or [PRing it yourself][pr].
+
+```
+The `database` folder is the most important folder, as it contains both the `summary.json` and individual files about the different phishing links.  
+Each separate file is stored in a folder named after the year they where added (Currently `2021`) and each file name follows the structure `<domain>.<tld>-<day>.<month>.json`.
+
+## Contribute
+Do you want to help expanding this repository? Great!  
+Please make sure to read the [Contributing Guide][contribute] for all the ins and outs of submitting domains to this repository before making a [Pull request][pr].  
+If you don't want to PR it can you still report it by [opening a new issue][issue].
+
+## Other sources
+This repository is not the only place to get information about phishing from. There are many other awesome places that you can check out too, which can be a great help.
+
+## [][phishing_discord]
+A Discord server dedicated to list known phishing domains of all types.  
+Has fairly advanced setups to avoid possible false positives.
+
+## [api.phish.surf][phishing_site]
+This is a website listing phishing domains in a JSON array, allowing you to essentially copy-paste the content into your moderation bot, system, etc.
