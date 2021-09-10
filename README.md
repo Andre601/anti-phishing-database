@@ -78,9 +78,9 @@ If you don't want to PR it can you still report it by [opening a new issue][issu
 ## Other sources
 This repository is not the only place to get information about phishing from. There are many other awesome places that you can check out too, which can be a great help.
 
-## [🐟🐠 Discord Server][phishing_discord]
+### [🐟🐠 Discord Server][phishing_discord]
 A Discord server dedicated to list known phishing domains of all types.  
 Has fairly advanced setups to avoid possible false positives.
 
-## [api.phish.surf][phishing_site]
+### [api.phish.surf:5000/gimme-domains][phishing_site]
 This is a website listing phishing domains in a JSON array, allowing you to essentially copy-paste the content into your moderation bot, system, etc.
