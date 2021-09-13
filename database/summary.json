@@ -232,5 +232,12 @@
       "discord",
       "steam"
     ]
+  },
+  {
+    "domain": "discrod-app.site",
+    "affected_platforms": [
+      "discord",
+      "steam"
+    ]
   }
 ]
