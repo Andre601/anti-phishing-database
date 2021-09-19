@@ -239,5 +239,11 @@
       "discord",
       "steam"
     ]
+  },
+  {
+    "domain": "discord-hypesquade.com",
+    "affected_platforms": [
+      "discord"
+    ]
   }
 ]
