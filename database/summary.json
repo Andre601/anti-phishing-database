@@ -245,5 +245,12 @@
     "affected_platforms": [
       "discord"
     ]
+  },
+  {
+    "domain": "discocrd.gift",
+    "affected_platforms": [
+      "discord",
+      "steam"
+    ]
   }
 ]
