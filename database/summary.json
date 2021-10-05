@@ -252,5 +252,11 @@
       "discord",
       "steam"
     ]
+  },
+  {
+    "domain": "discordglfts.com",
+    "affected_platforms": [
+      "discord"
+    ]
   }
 ]
