@@ -3,7 +3,6 @@
 [issue]: https://github.com/Andre601/anti-scam-database/issues/new?template=report_domain.yml
 [pr]: https://github.com/Andre601/anti-scam-database/pulls
 
-[phishing_discord]: https://discord.gg/U596sjVwGy
 [anti-fish]: https://anti-fish.bitflow.dev/
 
 # Anti-Phishing Database
