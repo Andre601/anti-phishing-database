@@ -264,5 +264,11 @@
     "affected_platforms": [
       "discord"
     ]
+  },
+  {
+    "domain": "discorrl.com",
+    "affected_platforms": [
+      "discord"
+    ]
   }
 ]
