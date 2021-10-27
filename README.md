@@ -4,7 +4,7 @@
 [pr]: https://github.com/Andre601/anti-scam-database/pulls
 
 [phishing_discord]: https://discord.gg/U596sjVwGy
-[phishing_site]: http://api.phish.surf:5000/gimme-domains
+[anti-fish]: https://anti-fish.bitflow.dev/
 
 # Anti-Phishing Database
 Welcome to the Anti-Phishing Database
@@ -78,9 +78,14 @@ If you don't want to PR it can you still report it by [opening a new issue][issu
 ## Other sources
 This repository is not the only place to get information about phishing from. There are many other awesome places that you can check out too, which can be a great help.
 
-### [🐟🐠 (Phishing Project)][phishing_discord]
+### 🐟🐠 (Phishing Project)
 A Discord server dedicated to finding and listing phishing domains before they are used on Discord.  
 They regularely update their lists and have multiple methods of finding possible phishing domains.
 
-### [api.phish.surf:5000/gimme-domains][phishing_site]
-This is a website listing phishing domains in a JSON array, allowing you to essentially copy-paste the content into your moderation bot, system, etc.
+> Due to them constantly deleting perma-invites will you need to contact me in order to get an invite. You can do so through my [Discord Server](https://discord.gg/6dazXp6).
+
+### [anti-fish.bitflow.dev][anti-fish]
+A website and API helping you to find possible phishing links in messages.  
+All you have to do is send a POST request with proper JSON and the API will tell you what links it found and other useful info.
+
+Please read their docs for proper usage.
